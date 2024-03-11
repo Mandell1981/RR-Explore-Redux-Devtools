@@ -6,6 +6,7 @@ function Todo() {
     const items = useSelector((state) => state.todos.items)
     const dispatch = useDispatch()
     const [input, setInput] = useState('')
+    
 
     const renderItems = items.map((item, index) => <li key={index} onClick={() => dispatch(removeOne(index))}>{item}</li>)
 
